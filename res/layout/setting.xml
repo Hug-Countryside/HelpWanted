@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout android:id="@+id/widget34"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<TextView android:id="@+id/widget38" android:layout_width="209px"
+		android:layout_height="wrap_content" android:text="HelpWanted系统设置"
+		android:textStyle="bold" android:textColor="#ffffff00"
+		android:layout_x="130px" android:layout_y="32px">
+	</TextView>
+	<ImageButton android:id="@+id/cm" android:src="@drawable/setting1"
+		android:layout_width="240px" android:layout_height="180px"
+		android:text="Button" android:layout_x="0px" android:layout_y="122px">
+	</ImageButton>
+	<ImageButton android:id="@+id/ss" android:src="@drawable/setting2"
+		android:layout_width="240px" android:layout_height="180px"
+		android:text="Button" android:layout_x="240px" android:layout_y="122px">
+	</ImageButton>
+</AbsoluteLayout>

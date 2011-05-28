@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:scrollbars="vertical" android:fadingEdge="vertical">
+	<AbsoluteLayout android:id="@+id/widget0"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		xmlns:android="http://schemas.android.com/apk/res/android">
+		<ImageButton android:id="@+id/button2" android:src="@drawable/main1"
+			android:layout_width="240px" android:layout_height="240px"
+			android:text="Button" android:layout_x="0px" android:layout_y="0px">
+		</ImageButton>
+		<ImageButton android:id="@+id/button4" android:src="@drawable/main2"
+			android:layout_width="240px" android:layout_height="240px"
+			android:text="Button" android:layout_x="240px" android:layout_y="0px">
+		</ImageButton>
+		<ImageButton android:id="@+id/button6" android:src="@drawable/main3"
+			android:layout_width="240px" android:layout_height="240px"
+			android:text="Button" android:layout_x="0px" android:layout_y="240px">
+		</ImageButton>
+		<ImageButton android:id="@+id/button1" android:src="@drawable/main4"
+			android:layout_width="240px" android:layout_height="240px"
+			android:text="Button" android:layout_x="240px" android:layout_y="240px">
+		</ImageButton>
+		<ImageButton android:id="@+id/button3" android:src="@drawable/main5"
+			android:layout_width="240px" android:layout_height="240px"
+			android:text="Button" android:layout_x="0px" android:layout_y="480px">
+		</ImageButton>
+		<ImageButton android:id="@+id/button5" android:src="@drawable/main6"
+			android:layout_width="240px" android:layout_height="240px"
+			android:text="Button" android:layout_x="240px" android:layout_y="480px">
+		</ImageButton>
+	</AbsoluteLayout>
+</ScrollView>

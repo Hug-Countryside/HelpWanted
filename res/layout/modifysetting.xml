@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout android:id="@+id/widget30"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical">
+	<TextView android:id="@+id/widget31" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="软件默认执行功能："
+		android:textSize="20sp" android:textStyle="bold" android:textColor="#ff999999">
+	</TextView>
+	 <RadioGroup
+    android:id="@+id/radio"
+    android:layout_width="300px"
+    android:layout_height="100px"
+    android:layout_x="97px"
+    android:layout_y="98px"
+    android:orientation="horizontal"
+    android:checkedButton="@+id/sex1"
+  >
+		<RadioButton android:id="@+id/radio1"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:text="发求救短信" android:textStyle="bold" android:textColor="#ff999999"
+			android:checked="true">
+		</RadioButton>
+		<RadioButton android:id="@+id/radio2"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:text="拨打求救电话" android:textStyle="bold" android:textColor="#ff999999">
+		</RadioButton>
+	</RadioGroup>
+	<TextView android:id="@+id/widget36" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="求救信息内容："
+		android:textSize="20sp" android:textStyle="bold" android:textColor="#ff999999">
+	</TextView>
+	<EditText android:id="@+id/helpMsg" android:layout_width="296px"
+		android:layout_height="152px" android:text="EditText"
+		android:textSize="18sp">
+	</EditText>
+	<Button android:id="@+id/saveModify" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="保存修改"
+		android:textStyle="bold" android:textColor="#ff999999">
+	</Button>
+</TableLayout>

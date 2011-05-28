@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView 
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:scrollbars="vertical"
+android:fadingEdge="vertical"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+>
+<TableLayout
+android:id="@+id/widget931"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:orientation="vertical"
+>
+<TextView
+android:id="@+id/view1"
+android:layout_width="138px"
+android:layout_height="40px"
+android:text="摩尔斯电码"
+android:textSize="25sp"
+android:typeface="sans"
+android:textStyle="bold|italic"
+>
+</TextView>
+<TextView
+android:id="@+id/widget56"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="       电 码 表"
+android:textSize="22sp"
+android:typeface="monospace"
+android:textStyle="bold"
+>
+</TextView>
+<TextView
+android:id="@+id/widget37"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="      字符                   电码符号"
+android:textSize="21sp"
+>
+</TextView>
+<TextView
+android:id="@+id/widget39"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="        A                      ．━    "
+android:textSize="21sp"
+>
+</TextView>
+<TextView
+android:id="@+id/widget41"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="        B                        ━ ．．．"
+android:textSize="21sp"
+>
+</TextView>
+<TextView
+android:id="@+id/widget42"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="        C                        ━ ．━ ．"
+android:textSize="21sp"
+>
+</TextView>
+<TextView
+android:id="@+id/widget43"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="        D                        ━ ．．"
+android:textSize="21sp"
+>
+</TextView>
+<TextView
+android:id="@+id/widget45"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="        E                       ．"
+android:textSize="21sp"
+>
+</TextView>
+<TextView
+android:id="@+id/widget46"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="        F                       ．．━ ．"
+android:textSize="21sp"
+>
+</TextView>
+<TextView
+android:id="@+id/widget47"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="        G                        ━ ━ ．"
+android:textSize="21sp"
+>
+</TextView>
+<TextView
+android:id="@+id/widget48"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="        H                      ．．．．"
+android:textSize="21sp"
+>
+</TextView>
+<TextView
+android:id="@+id/widget49"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="         I                       ．．"
+android:textSize="21sp"
+>
+</TextView>
+<TextView
+android:id="@+id/widget50"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="         J                       ．━ ━ ━"
+android:textSize="21sp"
+>
+</TextView>
+<TextView
+android:id="@+id/widget51"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="        K                         ━ ．━"
+android:textSize="21sp"
+>
+</TextView>
+<TextView
+android:id="@+id/widget52"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="        L                       ．━ ．．"
+android:textSize="21sp"
+>
+</TextView>
+
+<TextView
+android:id="@+id/widget53"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="        M                       ━ ━"
+android:textSize="21sp"
+>
+</TextView>
+<TextView
+android:id="@+id/widget54"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="        N                        ━ ．"
+android:textSize="21sp"
+>
+</TextView>
+
+<TextView
+android:id="@+id/widget55"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="        O                       ━ ━ ━"
+android:textSize="21sp"
+>
+</TextView>
+<TextView
+android:id="@+id/widget57"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="        P                       ．━ ━ ．"
+android:textSize="21sp"
+>
+</TextView>
+
+
+<TextView
+android:id="@+id/widget54"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="        Q                       ━ ━ ．━"
+android:textSize="21sp"
+>
+</TextView>
+<TextView
+android:id="@+id/widget54"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="        R                       ．━ ．"
+android:textSize="21sp"
+>
+</TextView>
+<TextView
+android:id="@+id/widget54"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="        S                       ．．．"
+android:textSize="21sp"
+>
+</TextView>
+<TextView
+android:id="@+id/widget54"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="        T                        ━"
+android:textSize="21sp"
+>
+</TextView>
+<TextView
+android:id="@+id/widget54"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="        U                       ．．━"
+android:textSize="21sp"
+>
+</TextView>
+<TextView
+android:id="@+id/widget54"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="        V                       ．．．━"
+android:textSize="21sp"
+>
+</TextView>
+<TextView
+android:id="@+id/widget54"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="        W                      ．━ ━"
+android:textSize="21sp"
+>
+</TextView>
+<TextView
+android:id="@+id/widget54"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="        X                        ━ ．．━"
+android:textSize="21sp"
+>
+</TextView>
+<TextView
+android:id="@+id/widget54"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="        Y                        ━ ．━ ━"
+android:textSize="21sp"
+>
+</TextView>
+<TextView
+android:id="@+id/widget54"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="        Z                        ━ ━ ．．"
+android:textSize="21sp"
+>
+</TextView>
+<TextView
+android:id="@+id/widget54"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="        0                        ━ ━ ━ ━ ━"
+android:textSize="21sp"
+>
+</TextView>
+<TextView
+android:id="@+id/widget54"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="        1                        ．━ ━ ━ ━"
+android:textSize="21sp"
+>
+</TextView>
+<TextView
+android:id="@+id/widget54"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="        2                        ．．━ ━ ━"
+android:textSize="21sp"
+>
+</TextView>
+<TextView
+android:id="@+id/widget54"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="        3                        ．．．━ ━"
+android:textSize="21sp"
+>
+</TextView>
+<TextView
+android:id="@+id/widget54"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="        4                        ．．．．━"
+android:textSize="21sp"
+>
+</TextView>
+<TextView
+android:id="@+id/widget54"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="        5                        ．．．．．"
+android:textSize="21sp"
+>
+</TextView>
+<TextView
+android:id="@+id/widget54"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="        6                        ━ ．．．．"
+android:textSize="21sp"
+>
+</TextView>
+<TextView
+android:id="@+id/widget54"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="        7                        ━ ━ ．．．"
+android:textSize="21sp"
+>
+</TextView>
+<TextView
+android:id="@+id/widget54"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="        8                        ━ ━ ━ ．．"
+android:textSize="21sp"
+>
+</TextView>
+<TextView
+android:id="@+id/widget54"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="        9                        ━ ━ ━ ━ ．"
+android:textSize="21sp"
+>
+</TextView>
+</TableLayout>
+</ScrollView>

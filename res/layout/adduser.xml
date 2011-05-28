@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout
+  android:id="@+id/widget34"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:background="@drawable/white"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  >
+  <TextView
+    android:id="@+id/myTextView1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/add_name"
+    android:layout_x="90px"
+    android:layout_y="22px"
+  >
+  </TextView>
+  <TextView
+    android:id="@+id/myTextView2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/add_phone"
+    android:layout_x="90px"
+    android:layout_y="82px"
+  >
+  </TextView>
+  <EditText
+    android:id="@+id/myEditText1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:textSize="18sp"
+    android:layout_x="145px"
+    android:layout_y="5px"
+  >
+  </EditText>
+  <EditText
+    android:id="@+id/myEditText2"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:textSize="18sp"
+    android:layout_x="145px"
+    android:layout_y="72px"
+  >
+  </EditText>
+  <Button
+    android:id="@+id/myButton1"
+    android:layout_width="wrap_content"
+    android:layout_height="130px"
+    android:text="添 加"
+    android:layout_x="10px"
+    android:layout_y="5px"
+  >
+  </Button>
+
+
+</AbsoluteLayout>

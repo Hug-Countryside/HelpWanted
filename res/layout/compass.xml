@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout android:id="@+id/layout1"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<TextView android:id="@+id/mTextView" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:text="@string/str_text"
+		android:layout_x="200px" android:layout_y="30px" android:textColor="@drawable/white" />
+	<ImageView android:id="@+id/m_CompassBody"
+		android:layout_width="410px" android:layout_height="450px"
+		android:src="@drawable/p0" android:layout_x="35px" android:layout_y="62px" />
+</AbsoluteLayout>

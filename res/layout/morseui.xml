@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:scrollbars="vertical" android:fadingEdge="vertical">
+<AbsoluteLayout android:id="@+id/widget0"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<EditText android:id="@+id/inputText" android:layout_width="475px"
+		android:layout_height="100px"  android:textSize="36sp"
+		android:layout_x="2px" android:layout_y="12px">
+	</EditText>
+	<ImageButton android:id="@+id/stop" android:src="@drawable/morse3"
+		android:layout_width="240px" android:layout_height="240px"
+		android:text="Button" android:layout_x="240px" android:layout_y="210px">
+	</ImageButton>
+	<ImageButton android:id="@+id/sos" android:src="@drawable/morse1"
+		android:layout_width="480px" android:layout_height="90px"
+		android:text="Button" android:layout_x="0px" android:layout_y="115px">
+	</ImageButton>
+	<ImageButton android:id="@+id/soundAndshake" android:src="@drawable/morse2"
+		android:layout_width="240px" android:layout_height="240px"
+		android:text="Button" android:layout_x="2px" android:layout_y="210px">
+	</ImageButton>
+	<ImageButton android:id="@+id/sound" android:src="@drawable/morse4"
+		android:layout_width="240px" android:layout_height="240px"
+		android:text="Button" android:layout_x="2px" android:layout_y="450px">
+	</ImageButton>
+	<ImageButton android:id="@+id/shake" android:src="@drawable/morse5"
+		android:layout_width="240px" android:layout_height="240px"
+		android:text="Button" android:layout_x="240px" android:layout_y="450px">
+	</ImageButton>
+</AbsoluteLayout>
+</ScrollView>
