@@ -38,24 +38,24 @@ public class GraviyActivity extends Activity {
 	public static final int ITEM0 = Menu.FIRST;
 	public static final int ITEM1 = Menu.FIRST + 1;
 	private List<String> addressList = new ArrayList<String>();
-	// private String SMS_DELIVERED_ACTION = "SMS_DELIVERED_ACTION";
-	// private int SMS_RECEIVER_LENGTH = 3;
-	// private String SMS_SEND_ACTIOIN = "SMS_SEND_ACTIOIN";
+	private String SMS_DELIVERED_ACTION = "SMS_DELIVERED_ACTION";
+	private int SMS_RECEIVER_LENGTH = 3;
+	private String SMS_SEND_ACTIOIN = "SMS_SEND_ACTIOIN";
 	Msg msg = new Msg(this);
 	/**
-	 * ����ʱ����
+	 * 检测的时间间隔
 	 */
 	static final int UPDATE_INTERVAL = 100;
 	/**
-	 * ��һ�μ���ʱ��
+	 * 上一次检测的时间
 	 */
 	long mLastUpdateTime;
 	/**
-	 * ��һ�μ��ʱ�����ٶ���x��y��z�����ϵķ��������ں͵�ǰ���ٶȱȽ���
+	 * 上一次检测时，加速度在x、y、z方向上的分量，用于和当前加速度比较求差。
 	 */
 	float mLastX, mLastY, mLastZ;
 	/**
-	 * ҡ�μ����ֵ�������˶�ҡ�ε����г̶ȣ�ԽСԽ���С�
+	 * 摇晃检测阈值，决定了对摇晃的敏感程度，越小越敏感。
 	 */
 	public float shakeThreshold = 5000;
 	private float x, y, z;
@@ -79,11 +79,10 @@ public class GraviyActivity extends Activity {
 		// String name = null;
 
 		/*
-		 * TYPEע�� int TYPE_ACCELEROMETER ���ٶ� int TYPE_ALL
-		 * �������ͣ�NexusOneĬ��Ϊ ���ٶ� int TYPE_GYROSCOPE ��ת��(�����̫��) int
-		 * TYPE_LIGHT ���߸�Ӧ int TYPE_MAGNETIC_FIELD �ų� int TYPE_ORIENTATION
-		 * ����ָ���룩�ͽǶ� int TYPE_PRESSUR ѹ���� int TYPE_PROXIMITY ���룿��̫�� int
-		 * TYPE_TEMPERATURE �¶���
+		 * TYPE注解 int TYPE_ACCELEROMETER 加速度 int TYPE_ALL 所有类型，NexusOne默认为 加速度
+		 * int TYPE_GYROSCOPE 回转仪(这个不太懂) int TYPE_LIGHT 光线感应 int
+		 * TYPE_MAGNETIC_FIELD 磁场 int TYPE_ORIENTATION 定向（指北针）和角度 int
+		 * TYPE_PRESSUR 压力计 int TYPE_PROXIMITY 距离？不太懂 int TYPE_TEMPERATURE 温度啦
 		 */
 
 		SensorEventListener lsn = new SensorEventListener() {
@@ -106,9 +105,8 @@ public class GraviyActivity extends Activity {
 				float delta = FloatMath.sqrt(deltaX * deltaX + deltaY * deltaY
 						+ deltaZ * deltaZ)
 						/ diffTime * 10000;
-				// if (delta > shakeThreshold) { //
-				// �����ٶȵĲ�ֵ����ָ������ֵ����Ϊ����һ��ҡ��
-				setTitle("���ٶ�=" + (int) delta);
+				// if (delta > shakeThreshold) { // 当加速度的差值大于指定的阈值，认为这是一个摇晃
+				setTitle("摇晃手机求救"+"加速度=" + (int) delta);
 				if (delta > 2800) {
 					try {
 						if (mode.equals("1")) {
@@ -117,15 +115,17 @@ public class GraviyActivity extends Activity {
 							double longtitude = location.getLongitude();
 							double latitude = location.getLatitude();
 							double altitude = location.getAltitude();
-							String locationstr = "����:"
-									+ String.valueOf(latitude) + "γ��:"
-									+ String.valueOf(longtitude) + "���Σ�"
+							String locationstr = "经度:"
+									+ String.valueOf(latitude) + "纬度:"
+									+ String.valueOf(longtitude) + "海拔："
 									+ String.valueOf(altitude);
+							// 构造短信内容
 							String strMessage = msg1 + "\n" + locationstr;
 							int i = 0;
-							/* ����һȡ��default instance�� SmsManager���� */
+							/* 建构一取得default instance的 SmsManager对象 */
+							// 依次给userList中的人发短信
 							while (i < addressList.size()) {
-								msg.sendMsg(addressList.get(i), strMessage);
+								msg.sendMsg(addressList.get(i), strMessage);    
 								i++;
 							}
 							new AlertDialog.Builder(GraviyActivity.this)
@@ -140,8 +140,11 @@ public class GraviyActivity extends Activity {
 
 												}
 											}).show();
-						} else if (mode.equals("2")) {
-							String phone = "15801202342";
+						} // 设置中设置为了电话模式
+						else if (mode.equals("2")) {
+							// 默认给最后个人打电话.因为数据库里添加条目是"后来居上"
+							// TODO 能够设置给第几个人打...= =||
+							String phone = addressList.get(0);
 							Intent intent = new Intent(Intent.ACTION_CALL,
 									Uri.parse("tel:" + phone));
 							startActivity(intent);
@@ -158,13 +161,13 @@ public class GraviyActivity extends Activity {
 
 			}
 		};
-		// ע��listener������������Ǽ���������
+		// 注册listener，第三个参数是检测的灵敏度
 		sensorMgr
 				.registerListener(lsn, sensor, SensorManager.SENSOR_DELAY_GAME);
 		/*
-		 * SENSOR_DELAY_FASTEST �����������Ȼ������ SENSOR_DELAY_GAME
-		 * ��Ϸ��ʱ�������������һ��������͹��ˣ�����һ�����ѿ������
-		 * SENSOR_DELAY_NORMAL �Ƚ��� SENSOR_DELAY_UI ����ģ��������Ǻ���ݵ����
+		 * SENSOR_DELAY_FASTEST 最灵敏，快的然你无语 SENSOR_DELAY_GAME
+		 * 游戏的时候用这个，不过一般用这个就够了，和上一个很难看出区别 SENSOR_DELAY_NORMAL 比较慢。
+		 * SENSOR_DELAY_UI 最慢的，几乎就是横和纵的区别
 		 */
 	}
 
@@ -197,7 +200,7 @@ public class GraviyActivity extends Activity {
 
 				} while (s.moveToNext());
 			} else {
-				String defaultMsg = "��ȣ�����";
+				String defaultMsg = "求救!以下是我现在所处在的位置!";
 				s_db.insertTitle("1", defaultMsg);
 			}
 		} catch (Exception ex) {
@@ -233,8 +236,8 @@ public class GraviyActivity extends Activity {
 
 	public boolean onCreateOptionsMenu(Menu menu) {
 		super.onCreateOptionsMenu(menu);
-		menu.add(0, ITEM0, 0, "�� ��").setIcon(R.drawable.process);
-		menu.add(0, ITEM1, 0, "�ص���һҳ").setIcon(R.drawable.refresh);
+		menu.add(0, ITEM0, 0, "关 于").setIcon(R.drawable.process);
+		menu.add(0, ITEM1, 0, "回到上一页").setIcon(R.drawable.refresh);
 		return true;
 	}
 

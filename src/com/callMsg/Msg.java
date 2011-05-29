@@ -14,18 +14,18 @@ public class Msg {
 	}
 
 	public void sendMsg(String strDestAddress, String strMessage) {
-		/* 寤烘�涓��寰�efault instance��SmsManager瀵硅薄 */
+		/* 建构一取得default instance的 SmsManager对象 */
 		System.out.println("strDestAddress:" + strDestAddress + ","
 				+ "strMessage:" + strMessage);
 		SmsManager smsManager = SmsManager.getDefault();
-		// TODO Auto-generated method stub
-		/* 妫���朵欢浜虹�璇��寮��绠��瀛�����瓒��70瀛�� */
+        // TODO Auto-generated method stub
+        /* 检查收件人电话格式与简讯字数是否超过70字符 */
 		try {
-			/*
-			 * 涓や釜�′欢�芥��ラ�杩�����涓����绠�� *
-			 * ��缓���PendingIntent瀵硅薄骞朵娇��etBroadcast()�规�杩��Broadcast *
-			 * 灏�endingIntent,�佃�,绠�����绛���颁���endTextMessage()�规����绠��
-			 */
+            /*
+             * 两个条件都检查通过的情况下,发送简讯 * --- 当然,检测功能还没完成. = =||
+             * 先建构一PendingIntent对象并使用getBroadcast()方法进行Broadcast *
+             * 将PendingIntent,电话,简讯文字等参数传入sendTextMessage()方法发送简讯
+             */
 			PendingIntent mPI = PendingIntent.getBroadcast(activity, 0,
 					new Intent(), 0);
 			smsManager.sendTextMessage(strDestAddress, null, strMessage, mPI,
@@ -33,7 +33,8 @@ public class Msg {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		// Toast.makeText(Msg.this, "������!!", Toast.LENGTH_SHORT).show();
+		// Toast.makeText(Msg.this, "送出成功!!", Toast.LENGTH_SHORT).show();
+		// 送出成功的弹窗在Gravity中
 	}
 
 	public void call(String phone) {

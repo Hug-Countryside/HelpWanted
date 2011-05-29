@@ -44,33 +44,32 @@ public class Compass extends Activity {
 		compassControl.onPause();
 		super.onPause();
 	}
-
-	public boolean onCreateOptionsMenu(Menu menu) {
+	
+    
+    public boolean onCreateOptionsMenu(Menu menu) {
 		super.onCreateOptionsMenu(menu);
-		menu.add(0, ITEM0, 0, "�� ��").setIcon(R.drawable.process);
-		menu.add(0, ITEM1, 0, "�ص���һҳ").setIcon(R.drawable.refresh);
+		menu.add(0, ITEM0, 0, "关 于").setIcon(R.drawable.process);
+		menu.add(0, ITEM1, 0, "回到上一页").setIcon(R.drawable.refresh);
 		return true;
 	}
-
-	public boolean onOptionsItemSelected(MenuItem item) {
+    
+    public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
-		case ITEM0:
+		case ITEM0: 
 			actionClickMenuItem1();
-			break;
-		case ITEM1:
-			actionClickMenuItem2();
-			break;
+		break;
+		case ITEM1: 
+			actionClickMenuItem2(); break;
 
 		}
-		return super.onOptionsItemSelected(item);
-	}
+		return super.onOptionsItemSelected(item);}
 
-	private void actionClickMenuItem1() {
+	private void actionClickMenuItem1(){
 		Intent intent = new Intent(Compass.this, About.class);
 		startActivity(intent);
 	}
 
-	private void actionClickMenuItem2() {
+	private void actionClickMenuItem2(){
 		finish();
 	}
 }

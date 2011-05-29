@@ -4,7 +4,7 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:orientation="vertical">
 	<TextView android:id="@+id/widget31" android:layout_width="wrap_content"
-		android:layout_height="wrap_content" android:text="软件默认执行功能："
+		android:layout_height="wrap_content" android:text="默认执行功能："
 		android:textSize="20sp" android:textStyle="bold" android:textColor="#ff999999">
 	</TextView>
 	 <RadioGroup
@@ -31,7 +31,7 @@
 		android:textSize="20sp" android:textStyle="bold" android:textColor="#ff999999">
 	</TextView>
 	<EditText android:id="@+id/helpMsg" android:layout_width="296px"
-		android:layout_height="152px" android:text="EditText"
+		android:layout_height="152px" android:text="求救!以下是我现在所处在的位置!"
 		android:textSize="18sp">
 	</EditText>
 	<Button android:id="@+id/saveModify" android:layout_width="wrap_content"

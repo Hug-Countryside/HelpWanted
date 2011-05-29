@@ -7,7 +7,7 @@
 	xmlns:android="http://schemas.android.com/apk/res/android">
 	<EditText android:id="@+id/inputText" android:layout_width="475px"
 		android:layout_height="100px"  android:textSize="36sp"
-		android:layout_x="2px" android:layout_y="12px">
+		android:layout_x="2px" android:layout_y="12px" android:text="MAYDAY">
 	</EditText>
 	<ImageButton android:id="@+id/stop" android:src="@drawable/morse3"
 		android:layout_width="240px" android:layout_height="240px"

@@ -13,16 +13,7 @@ android:layout_width="fill_parent"
 android:layout_height="fill_parent"
 android:orientation="vertical"
 >
-<TextView
-android:layout_width="wrap_content"
-android:layout_height="fill_parent"
-android:text="    ★   Help Wanted   ★\n"
-android:textSize="27sp"
-android:typeface="sans"
-android:textStyle="bold"
-android:textColor="@drawable/red"
->
-</TextView>
+    <TextView android:layout_height="fill_parent" android:id="@+id/textView1" android:text="★　Help Wanted　★\ｎ" android:textStyle="bold" android:textSize="27sp" android:layout_width="wrap_content" android:textColor="@drawable/red" android:typeface="sans"></TextView>
 
 <ImageView 
   android:id="@+id/image"
@@ -31,42 +22,16 @@ android:textColor="@drawable/red"
   android:layout_height="wrap_content">
  </ImageView>
 
+
 <TextView
 android:id="@+id/widget39"
 android:layout_width="wrap_content"
 android:layout_height="wrap_content"
-android:text="\n产品名称：Help Wanted"
+android:text="\n版本: v1.1"
 android:textSize="21sp"
 >
 </TextView>
-<TextView
-android:id="@+id/widget39"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:text="\n版        本：Version 1.0"
-android:textSize="21sp"
->
-</TextView>
-<TextView
-android:id="@+id/widget39"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:text="开发团队：PCHHL"
-android:textSize="21sp"
->
-</TextView>
-<TextView
-android:id="@+id/widget39"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:text="成        员：黄新宇\n
-	                  刘彤\n
-	                  潘俊杰\n
-	                  侯雷杰\n
-	                  崔啸天"
-android:textSize="21sp"
->
-</TextView>
+
 
 
 

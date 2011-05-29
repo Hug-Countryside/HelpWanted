@@ -1,4 +1,4 @@
-#Fri May 27 15:58:44 CST 2011
+#Sun May 29 16:05:56 CST 2011
 eclipse.preferences.version=1
 encoding//src/com/callMsg/Msg.java=UTF-8
 encoding//src/com/helpWanted/AddUser.java=UTF-8
@@ -11,3 +11,4 @@ encoding//src/com/helpWanted/Main.java=UTF-8
 encoding//src/com/helpWanted/ModifySetting.java=UTF-8
 encoding//src/com/helpWanted/Setting.java=UTF-8
 encoding//src/com/model/User.java=UTF-8
+encoding/<project>=UTF-8

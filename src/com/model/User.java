@@ -5,7 +5,7 @@ public class User {
 	private String username;
 	private String phone;
 
-	// ���ú������ϵ�����
+	// 设置
 	public void setId(String id) {
 		this.id = id;
 	}
@@ -14,7 +14,7 @@ public class User {
 		this.phone = phone;
 	}
 
-	// ��ȡ
+	// 提取
 	public String getUsername() {
 		return username;
 	}

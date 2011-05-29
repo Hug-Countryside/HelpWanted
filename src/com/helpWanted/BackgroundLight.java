@@ -21,13 +21,13 @@ public class BackgroundLight extends Activity {
 		mLinearLayout = (LinearLayout) findViewById(R.id.myLinearLayout1);
 		BackgroundLightControl blc = new BackgroundLightControl(mLinearLayout,
 				this);
-		blc.setBackgroundlight(android.graphics.Color.RED, "��ɫ");
+		blc.setBackgroundlight(android.graphics.Color.RED, "红色");
 	}
 
 	public boolean onCreateOptionsMenu(Menu menu) {
 		super.onCreateOptionsMenu(menu);
-		menu.add(0, ITEM0, 0, "�� ��").setIcon(R.drawable.process);
-		menu.add(0, ITEM1, 0, "�ص���һҳ").setIcon(R.drawable.refresh);
+		menu.add(0, ITEM0, 0, "关 于").setIcon(R.drawable.process);
+		menu.add(0, ITEM1, 0, "回到上一页").setIcon(R.drawable.refresh);
 		return true;
 	}
 

@@ -26,8 +26,7 @@ public class ListUser extends ListActivity {
 	public static final int ITEM1 = Menu.FIRST + 1;
 	public static final int ITEM2 = Menu.FIRST + 2;
 	private List<String> names = new ArrayList<String>();
-
-	// private List phones = new ArrayList();
+	//private List phones = new ArrayList();
 	// private List value = new ArrayList();
 
 	public void onCreate(Bundle savedInstanceState) {
@@ -48,9 +47,9 @@ public class ListUser extends ListActivity {
 				do {
 					names.add(c.getString(1) + ":" + c.getString(2));
 					p_db.deleteTitle(i);
-					// (String.valueOf(i));
+					//(String.valueOf(i));
 					i++;
-					// Toast.makeText(this, i, Toast.LENGTH_LONG).show();
+				//	Toast.makeText(this, i, Toast.LENGTH_LONG).show();
 				} while (c.moveToNext());
 			}
 		} catch (Exception ex) {
@@ -63,42 +62,40 @@ public class ListUser extends ListActivity {
 		setListAdapter(adapter);
 		p_db.close();
 	}
-
-	public boolean onCreateOptionsMenu(Menu menu) {
+	
+    
+    public boolean onCreateOptionsMenu(Menu menu) {
 		super.onCreateOptionsMenu(menu);
-		menu.add(0, ITEM0, 0, "�� ��").setIcon(R.drawable.add);
-		menu.add(0, ITEM1, 0, "�� ��").setIcon(R.drawable.process);
-		menu.add(0, ITEM2, 0, "�ص���һҳ").setIcon(R.drawable.refresh);
+		menu.add(0, ITEM0, 0, "添 加").setIcon(R.drawable.add);
+		menu.add(0, ITEM1, 0, "关 于").setIcon(R.drawable.process);
+		menu.add(0, ITEM2, 0, "回到上一页").setIcon(R.drawable.refresh);
 		return true;
 	}
-
-	public boolean onOptionsItemSelected(MenuItem item) {
+    
+    public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
-		case ITEM0:
+		case ITEM0: 
 			actionClickMenuItem1();
-			break;
-		case ITEM1:
-			actionClickMenuItem2();
-			break;
-		case ITEM2:
-			actionClickMenuItem3();
-			break;
+		break;
+		case ITEM1: 
+			actionClickMenuItem2(); break;
+		case ITEM2: 
+			actionClickMenuItem3(); break;
 
 		}
-		return super.onOptionsItemSelected(item);
-	}
+		return super.onOptionsItemSelected(item);}
 
-	private void actionClickMenuItem1() {
+	private void actionClickMenuItem1(){
 		Intent intent = new Intent(ListUser.this, AddUser.class);
 		startActivity(intent);
 	}
-
-	private void actionClickMenuItem2() {
+	
+	private void actionClickMenuItem2(){
 		Intent intent = new Intent(ListUser.this, About.class);
 		startActivity(intent);
 	}
-
-	private void actionClickMenuItem3() {
+	
+	private void actionClickMenuItem3(){
 		finish();
 	}
 

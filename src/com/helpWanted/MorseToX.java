@@ -140,8 +140,8 @@ public class MorseToX extends Activity {
 	
     public boolean onCreateOptionsMenu(Menu menu) {
 		super.onCreateOptionsMenu(menu);
-		menu.add(0, ITEM0, 0, "¹Ø ÓÚ").setIcon(R.drawable.process);
-		menu.add(0, ITEM1, 0, "»Øµ½ÉÏÒ»Ò³").setIcon(R.drawable.refresh);
+		menu.add(0, ITEM0, 0, "å…³ äºŽ").setIcon(R.drawable.process);
+		menu.add(0, ITEM1, 0, "å›žåˆ°ä¸Šä¸€é¡µ").setIcon(R.drawable.refresh);
 		return true;
 	}
     

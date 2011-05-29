@@ -49,9 +49,8 @@ public class SettingValue_DBAdapter {
 	}
 
 	/**
-	 * ´ò¿ªÊı¾İ¿â
-	 * 
-	 * @return DBAdapter¶ÔÏó
+	 * æ‰“å¼€æ•°æ®åº“
+	 * @return DBAdapterå¯¹è±¡
 	 * @throws SQLException
 	 */
 	public SettingValue_DBAdapter open() throws SQLException {
@@ -60,20 +59,17 @@ public class SettingValue_DBAdapter {
 	}
 
 	/**
-	 * ¹Ø±ÕÊı¾İ¿â
+	 * å…³é—­æ•°æ®åº“
 	 */
 	public void close() {
 		DBHelper.close();
 	}
 
 	/**
-	 * ÏòÊı¾İ¿âÖĞ²åÈëÒ»¸ö×éÊı¾İ
-	 * 
-	 * @param mode
-	 *            Ä£Ê½
-	 * @param avalue
-	 *            ¼ÓËÙ¶ÈÖµ
-	 * @return idºÅ, -1Îª´íÎó
+	 * å‘æ•°æ®åº“ä¸­æ’å…¥ä¸€ä¸ªç»„æ•°æ®
+	 * @param mode æ¨¡å¼
+	 * @param avalue åŠ é€Ÿåº¦å€¼
+	 * @return idå·, -1ä¸ºé”™è¯¯
 	 */
 	public long insertTitle(String mode, String avalue) {
 		ContentValues initialValues = new ContentValues();
@@ -83,20 +79,17 @@ public class SettingValue_DBAdapter {
 	}
 
 	/**
-	 * É¾³ıÒ»×éÊı¾İ
-	 * 
-	 * @param id
-	 *            idºÅ
-	 * @return ²Ù×÷ÊÇ·ñ³É¹¦
+	 * åˆ é™¤ä¸€ç»„æ•°æ®
+	 * @param id idå·
+	 * @return æ“ä½œæ˜¯å¦æˆåŠŸ
 	 */
 	public boolean deleteTitle(long id) {
 		return db.delete(DATABASE_TABLE2, DB2_KEY_ID + "=" + id, null) > 0;
 	}
 
 	/**
-	 * »ñµÃËùÓĞĞÅÏ¢
-	 * 
-	 * @return Êı¾İ¼¯Ö¸Õë
+	 * è·å¾—æ‰€æœ‰ä¿¡æ¯
+	 * @return æ•°æ®é›†æŒ‡é’ˆ
 	 */
 	public Cursor getAllTitles() {
 		return db.query(DATABASE_TABLE2, new String[] { DB2_KEY_ID,
@@ -104,13 +97,10 @@ public class SettingValue_DBAdapter {
 	}
 
 	/**
-	 * »ñµÃÖ¸¶¨ĞÅÏ¢
-	 * 
-	 * @param rowId
-	 *            idºÅ
-	 * @return Êı¾İ¼¯Ö¸Õë
-	 * @throws SQLException
-	 *             SQLÒì³£
+	 * è·å¾—æŒ‡å®šä¿¡æ¯
+	 * @param rowId idå·
+	 * @return æ•°æ®é›†æŒ‡é’ˆ
+	 * @throws SQLException SQLå¼‚å¸¸
 	 */
 	public Cursor getTitle(long rowId) throws SQLException {
 		Cursor mCursor = db.query(true, DATABASE_TABLE2, new String[] {
@@ -123,15 +113,11 @@ public class SettingValue_DBAdapter {
 	}
 
 	/**
-	 * ĞŞ¸ÄÊı¾İ
-	 * 
-	 * @param rowId
-	 *            idºÅ
-	 * @param mode
-	 *            Ä£Ê½
-	 * @param avalue
-	 *            ¼ÓËÙ¶ÈÖµ
-	 * @return ²Ù×÷ÊÇ·ñ³É¹¦
+	 * ä¿®æ”¹æ•°æ®
+	 * @param rowId idå·
+	 * @param mode æ¨¡å¼
+	 * @param avalue åŠ é€Ÿåº¦å€¼
+	 * @return æ“ä½œæ˜¯å¦æˆåŠŸ
 	 */
 	public boolean updateTitle(long rowId, String mode, String avalue) {
 		ContentValues args = new ContentValues();
